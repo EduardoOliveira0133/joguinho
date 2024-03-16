@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Site que recomenda jogos de acordo com a idade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/icon.png">
+</head>
+<body>
+    <center> 
+    <header><h1>Site que recomenda jogos de acordo com a sua idade!!!</h1></header>
+    <p>Digite a sua idade:<br></p>
+    <input type="number" id="idade" min="1" max="100">
+    <button onclick="verificarIdade()">Verificar</button>
+    <script>
+        function verificarIdade() {
+            var idade = parseInt(document.getElementById("idade").value);
+
+            if (idade < 12){
+                window.location.replace("crianca.html");
+            }else if (idade >= 12 && idade < 18){
+                window.location.replace("adolescente.html");
+            }else if (idade > 17 && idade < 60){
+                window.location.replace("adulto.html");
+            }else if (idade > 59){
+                window.location.replace("idoso.html");
+            }else{
+                alert("Digite a sua idade!");
+            }
+        }
+    </script>
+    <div class="game-board">
+        <img src="imgs/bloco.jpg" class="bloco">
+        <img src="imgs/mario.gif" class="mario jump">
+    </div>
+    <p class="pulo">Aperte espaço para pular</p>
+    <footer>
+        <h5>Trabalho acadêmico - Sem fins lucrativos<br>Eduardo Oliveira - &copyTodos os direitos reservados 2024</h5>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

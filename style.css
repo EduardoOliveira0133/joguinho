@@ -1,0 +1,262 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+*   {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    padding-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+hr{
+    height: 5px;
+    background-color: white;
+    margin-bottom: 2%;
+}
+
+#idade{
+    width: 12%;
+}
+
+button{
+    width: 5%;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.content-crianca{
+    background-image: url(imgs/fcr.jpg);
+    width: 100%;
+    background-repeat: ;
+}
+.content-adolescente{
+    background-image: url(imgs/fad.jpg);
+    width: 100%;
+    background-repeat: ;
+}
+.content-adulto{
+    background-image: url(imgs/fat.jpg);
+    width: 100%;
+    background-repeat: ;
+    color: white;
+}
+.content-idoso{
+    background-image: url(imgs/fid.webp);
+    width: 100%;
+    background-repeat: ;
+    color: black;
+}
+
+.content-adulto a{
+    color: white;
+}
+
+/*Mario*/
+
+.game-board{
+    text-align: center;
+    height: 350px;
+    position: relative;
+}
+
+.bloco{
+    width: 100px;
+    position: absolute;
+    left: 46%;
+    transition: 0.5s;
+    display: block;
+}
+
+
+.mario{
+    width: 150px;
+    position: absolute;
+    left: 43%;
+    bottom: 10px;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 120px;
+    }
+    50%{
+        bottom: 120px;
+    }
+    60%{
+        bottom: 120px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+/**/
+
+.article{
+    margin-top: 1%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.article p{
+    width: 65%;
+    margin-top: 0;
+    margin-bottom: 3%;
+    text-align: justify;
+    text-indent: 12px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.article h2{
+    margin-top: 1%;
+    margin-bottom: 0;
+    text-align: center;
+    text-indent: 8px;
+    font-size: 30px;
+}
+
+/*carrossel*/
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 540px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 540px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 1s;
+}
+
+.slide img{
+    width: 200px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+.manual-btn:hover{
+    background-color: black;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+    transition: 1s;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+    transition: 1s;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+    transition: 1s;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+    transition: 1s;
+}
+
+.navigation-auto div{
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}   
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 490px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #000000;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #000000;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #000000;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #000000;
+}
+/*footer*/
+
+footer{
+    margin-top: %;
+    padding: 10px;
+    background-color: darkslategrey;
+}
+
+footer h5{
+    text-align: center;
+    color: white;
+}
+
+header{
+    padding: 10px;
+    background-color: darkslategrey;
+    text-align: center;
+    color: white;
+    margin-bottom: 5%;
+}
